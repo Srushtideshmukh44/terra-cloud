@@ -1,10 +1,16 @@
 variable "aws_region" {
+  description = "AWS region"
   type        = string
   default     = "ap-south-1"
-  description = "AWS region where resources will be created"
 }
 
-variable "bucket_name" {
+variable "ami_id" {
+  description = "AMI ID to use for the EC2 instance"
   type        = string
-  description = "A unique name for the S3 bucket"
+}
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t2.micro"
 }
